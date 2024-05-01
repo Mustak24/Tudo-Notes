@@ -1,0 +1,147 @@
+
+html,body{
+    width: 100%; height: 100%; margin: 0%;
+    position: static;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.flex{
+    display: flex; align-items: center;
+    justify-content: center; flex-direction: column;
+}
+.flex_top{justify-content: flex-start;}
+
+.row{flex-direction: row;}
+
+body{
+    box-sizing: border-box;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+main{
+    --main:rgba(240, 248, 255, 0.9);
+    padding: 20px 10px; box-sizing: border-box;
+    width: 90%; height: fit-content;
+    border-radius: 30px;
+    display: grid; justify-content: center;
+    align-items: center; gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(150px,20%));
+    background-color: var(--main);
+    min-width: fit-content;
+
+}
+
+main div{
+    width: 100%; aspect-ratio: 1;
+    border-radius: 10px;
+    background-color: rgb(184, 255, 241, 0.666);
+    justify-content: top;
+    padding: 8px;
+    box-sizing: border-box;
+
+    h2{height: fit-content; margin: 0%;}
+
+    p{
+        overflow-wrap: break-word;
+        width: 100%;
+        height: 60%;
+        overflow: scroll;
+        background-color: aliceblue;
+        padding: 4px; box-sizing: border-box;
+        border-radius: 10px;
+    }
+}
+
+::-webkit-scrollbar{display: none;}
+
+#new_note_box button{
+    width: 50%; aspect-ratio: 1;
+    border-radius: 50%;
+    position: sticky;
+    overflow: hidden;
+    border: none;
+    background-color: transparent;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.501);
+}
+#new_note_box button::before{
+    content: ''; position: absolute;
+    width: 50%; border: 5px solid silver;
+}
+#new_note_box button::after{
+    content: ''; position: absolute;
+    height: 50%; border: 5px solid silver;
+}
+
+@keyframes anime{
+    100%{opacity: 0; scale: 0;}
+}
+
+#Note{
+    width: fit-content; height: fit-content;
+    padding: 25px; position: absolute; 
+    gap: 10px; border-radius: 25px;
+    background-color: rgb(171, 245, 255, .5);
+    opacity: 0; transform: scale(0);
+    transition: all 700ms;
+
+    div{
+        background-color: rgba(147, 255, 230, 0.966);
+        padding: 10px;
+        border-radius: 20px 20px 0 0;
+    }
+    div:nth-child(2){
+        border-radius: 0;
+    }
+}
+
+#Note div textarea{
+    resize: none;
+    width: 200px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 1);
+}
+#Note div textarea::-webkit-scrollbar{display: none;}
+
+#note_heading{
+    height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+}
+#note_about{
+    font-size: 15px;
+    font-weight: 500;
+    height: 150px;
+}
+#Note button{
+    width: 100%; height: 30px;
+    border-radius: 0 0 20px 20px;
+    background-color: rgba(0, 195, 255, 0.666);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+}
+
+@keyframes anime2{
+    100%{opacity: 1; scale: 1.05;}
+}
+
+.note{position: sticky;}
+
+.close{
+    position: absolute;
+    background-color: var(--main);
+    width: 18%; height: 18%;
+    top: -5%; right: -5%;
+    border-radius: 50%;
+    box-sizing: border-box;
+    font-weight: 900;
+    font-size: larger;
+    border: none;
+}
