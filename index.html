@@ -2,34 +2,34 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Tudo Notes</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Tudo Notes</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body class="flex">
 
-  <main id="main">
-      <div id="new_note_box" class="flex">
-          <button class="flex" onclick="new_note()"></button>
-          <span>Add New Note</span>
-      </div>
-  </main>
+    <main id="main">
+        <div id="new_note_box" class="flex" style="justify-content: top;">
+            <button class="flex" onclick="new_note_start_anime(true)"></button>
+            <span>Add New Note</span>
+        </div>
+    </main>
 
-  <div id="Note" class="flex">
-      <div>
-          <h2 style="margin: 0%;">Heading : </h2>
-          <textarea id="note_heading"></textarea>
-      </div>
-      <div>
-          <h2 style="margin: 0%;">Content : </h2>
-          <textarea id="note_about"></textarea>
-      </div>
-      <button onclick="save_note()">Save</button>
-  </div>
+    <div id="Note" class="flex">
+        <div>
+            <h2 style="margin: 0%;">Heading : </h2>
+            <textarea id="note_heading"></textarea>
+        </div>
+        <div>
+            <h2 style="margin: 0%;">Content : </h2>
+            <textarea id="note_about"></textarea>
+        </div>
+        <button id="save_but" onclick="save_note()">Add</button>
+    </div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
